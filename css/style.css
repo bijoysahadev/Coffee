@@ -1,0 +1,352 @@
+/* common css starts here */
+/* google font link starts here */
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+/* google font link ends here */
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* colors */
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #3b141c;
+  --seconday-color: #f3961c;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+  /* font seize */
+  --font-seize-s: 0.9rem;
+  --font-seize-n: 1rem;
+  --font-seize-m: 1.12rem;
+  --font-seize-l: 1.5rem;
+  --font-seize-xl: 2rem;
+  --font-seize-xxl: 2.3rem;
+
+  /* font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight--bold: 700;
+  /* border radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+  /* site max width */
+  --seize-max-width: 1300px;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.section-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: var(--seize-max-width);
+}
+.section-tiitle {
+  text-align: center;
+  padding: 60px 0 100px;
+  text-transform: uppercase;
+  font-size: var(--font-seize-xl);
+}
+.section-tiitle::after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: var(--border-radius-s);
+  background: var(--seconday-color);
+}
+/* common css ends here */
+/*  header css starts here*/
+header {
+  background: var(--primary-color);
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+.navbar .nav-logi .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-seize-xl);
+  font-weight: var(--font-weight-semi-bold);
+}
+.navbar .nav-menu {
+  display: flex;
+  gap: 10px;
+}
+.navbar .nav-menu .nav-link {
+  color: var(--white-color);
+  padding: 10px 18px;
+
+  border-radius: var(--border-radius-m);
+  font-size: var(--font-seize-m);
+  transition: 0.3s ease;
+}
+.navbar .nav-menu .nav-link:hover {
+  background: var(--seconday-color);
+  color: var(--primary-color);
+}
+.hero-section {
+  min-height: 100vh;
+  background: var(--primary-color);
+}
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--white-color);
+  justify-content: space-between;
+}
+.hero-section .hero-details .tittle {
+  font-size: var(--font-seize-xxl);
+  color: var(--seconday-color);
+  font-family: "Miniver", sans-serif;
+}
+.hero-section .hero-details .subtittle {
+  font-size: var(--font-seize-xl);
+  margin-top: 8px;
+  max-width: 70%;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.hero-section .hero-details .description {
+  font-size: var(--font-seize-m);
+  max-width: 48%;
+  margin: 24px 0 40px;
+}
+.hero-section .hero-details .button {
+  padding: 10px 26px;
+  color: var(--primary-color);
+  border-radius: var(--border-radius-m);
+  background: var(--seconday-color);
+  font-weight: var(--font-weight-medium);
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+.hero-section .hero-details .buttons {
+  display: flex;
+  gap: 23px;
+}
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .contact-us {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+.hero-section .hero-details .contact-us:hover {
+  color: var(--primary-color);
+  border-color: var(--seconday-color);
+  background: var(--seconday-color);
+}
+.hero-section .hero-image-wrapper {
+  max-width: 500px;
+  margin-right: 30px;
+}
+.navbar .nav-menu :where(#menu-close-button) {
+  display: none;
+}
+
+#menu-open-button {
+  display: none;
+}
+/* about section css starts here */
+.about-section {
+  padding: 120px 0;
+  background: var(--light-pink-color);
+}
+.about-section .section-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-section .about-image-wrapper .about-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+}
+.about-section .about-details .section-tiitle {
+  padding: 0;
+}
+.about-section .about-details {
+  max-width: 50%;
+}
+.about-section .about-details .text {
+  line-height: 30px;
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: var(--font-seize-m);
+}
+.about-section .social-link-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+.about-section .social-link-list .social-link {
+  color: var(--primary-color);
+  font-size: var(--font-seize-l);
+  transition: all 0.3 ease;
+}
+.about-section .social-link-list .social-link:hover {
+  color: var(--seconday-color);
+  transform: translateY(-5px);
+}
+/* about section css ends here */
+
+/* menu section starts */
+.menu-section {
+  color: var(--white-color);
+  background: var(--dark-color);
+  padding: 50px 0 100px;
+}
+.menu-section .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 110px;
+  justify-content: space-between;
+}
+.menu-section .menu-list .menu-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% / 3 - 110px);
+  justify-content: space-between;
+  text-align: center;
+}
+.menu-section .menu-list .menu-item .menu-image {
+  max-width: 83%;
+  aspect-ratio: 1;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+/* responsive for deskop screen */
+@media screen and (max-width :1024px) {
+  .menu-section .menu-list .menu-item {
+      width: calc(100% / 3 - 60px);
+  }
+  .menu-section .menu-list {
+    gap: 60px;
+  }
+}
+.menu-section .menu-list .menu-item  .name {
+  margin: 12px 0;
+  font-size: var(--font-seize-l);
+  font-weight: var(--font-weight-semi-bold);
+
+}
+.menu-section .menu-list .menu-item .text {
+  font-size: var(--font-seize-m);
+}
+/* menu section ends */
+/* responsive media query code for max width */
+@media screen and (max-width: 900px) {
+  :root {
+    /* font seize */
+
+    --font-seize-m: 1rem;
+    --font-seize-l: 1.3rem;
+    --font-seize-xl: 5rem;
+    --font-seize-xxl: 1.8rem;
+  }
+  body.show-mobile-menu header:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .navbar :where(#menu-close-button, #menu-open-button) {
+    font-size: var(--font-seize-l);
+    display: block !important;
+  }
+
+  .navbar #menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  .navbar #menu-open-button {
+    color: var(--white-color);
+  }
+  .navbar .nav-menu {
+    display: block;
+    background: var(--white-color);
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    height: 100%;
+    transition: left 0.2s ease;
+  }
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+  .navbar .nav-menu .nav-item a {
+    color: var(--dark-color);
+    font-size: var(--font-seize-l);
+    margin-top: 17px;
+    display: block;
+  }
+  .navbar .nav-menu .nav-link:hover {
+    background: var(--seconday-color);
+    color: var(--primary-color);
+  }
+  .hero-section .section-content {
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .hero-section .hero-image-wrapper {
+    max-width: 270px;
+    margin-right: 0;
+  }
+  .hero-section .hero-details :is(.subtittle, .description),
+  .about-section .about-details {
+    max-width: 100%;
+  }
+  .hero-section .hero-details .buttons {
+    justify-content: center;
+  }
+  .about-section .section-content {
+    flex-direction: column-reverse;
+    gap: 70px;
+  }
+  .about-section .about-image-wrapper .about-image {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+}

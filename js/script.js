@@ -1,3 +1,4 @@
+const navLinks=document.querySelector(".nav-menu .nav-link")
 const menuOpenButton = document.querySelector("#menu-open-button"); // Fixed with quotes
 const menuCloseButton =document.querySelector("#menu-close-button")
 menuOpenButton.addEventListener("click", ()=>{
@@ -7,6 +8,9 @@ menuOpenButton.addEventListener("click", ()=>{
     
 })
 menuCloseButton.addEventListener("click", ()=>menuOpenButton.click())
+navLinks.forEach(link => {
+    link.addEventListener("click",()=> menuOpenButton.click())
+})
 // swipper javascript starts here
 const swiper = new Swiper('.slider-wrapper', {
 
